@@ -53,4 +53,11 @@ class URLFieldType extends FieldTypeBase
         return 'string';
     }
 
+    public function getStorageOptions()
+    {
+        return [
+          'default' => ''
+        ];
+    }
+
 }
