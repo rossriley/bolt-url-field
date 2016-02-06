@@ -50,7 +50,7 @@ class URLFieldType extends FieldTypeBase
 
     public function getStorageType()
     {
-        return 'text';
+        return 'string';
     }
 
 }
