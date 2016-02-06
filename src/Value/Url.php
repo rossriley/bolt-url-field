@@ -163,12 +163,26 @@ class Url
     }
 
     /**
+     * True if no significant parts are set
+     * @return bool
+     */
+    public function isEmpty()
+    {
+        return (empty($this->getScheme()) && empty($this->getDomain()) && empty($this->getPath()));
+
+    }
+
+    /**
      * Returns a string representation of the url
      *
      * @return string
      */
     public function __toString()
     {
+        if ($this->isEmpty()) {
+            return '';
+        }
+
         $userPass = '';
         if ($this->getUser()) {
             $userPass = sprintf('%s@', $this->getUser());
