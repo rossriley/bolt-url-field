@@ -46,4 +46,9 @@ class URLFieldType extends FieldTypeBase
     {
         return 'url';
     }
+
+    public function getStorageType()
+    {
+        return Type::getType('text');
+    }
 }
