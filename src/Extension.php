@@ -7,11 +7,18 @@ use Bolt\Extension\SimpleExtension;
 /**
  * The main extension class.
  *
- * @author Your Name <riley.ross@gmail.com>
+ * @author Ross Riley <riley.ross@gmail.com>
  */
 class Extension extends SimpleExtension
 {
 
+    public function getServiceProviders()
+    {
+        return [
+            $this,
+            new FieldProvider()
+        ];
+    }
 
     /**
      * {@inheritdoc}
