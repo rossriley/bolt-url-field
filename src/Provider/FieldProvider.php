@@ -11,22 +11,23 @@ class FieldProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
-        $app['storage.field_manager'] = $app->share(
-            $app->extend(
-                'storage.field_manager',
-                function (FieldManager $manager) {
-                    $manager->addFieldType('url', new URLFieldType());
-
-                    return $manager;
-                }
-            )
-        );
-
         $app['storage.typemap'] = array_merge(
             $app['storage.typemap'],
             [
                 'url' => URLFieldType::class
             ]
+        );
+
+        $app['storage.field_manager'] = $app->share(
+            $app->extend(
+                'storage.field_manager',
+                function (FieldManager $manager) {
+                    dump($manager); exit;
+                    $manager->addFieldType('url', new URLFieldType());
+
+                    return $manager;
+                }
+            )
         );
 
     }
