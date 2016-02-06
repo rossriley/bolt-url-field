@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\Ross\URLField;
+namespace Bolt\Extension\Ross\URLField\Provider;
 
 use Bolt\Extension\Ross\URLField\Field\URLFieldType;
 use Bolt\Storage\FieldManager;

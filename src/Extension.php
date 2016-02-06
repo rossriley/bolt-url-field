@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Ross\URLField;
 
+use Bolt\Extension\Ross\URLField\Provider\FieldProvider;
 use Bolt\Extension\SimpleExtension;
 
 /**
