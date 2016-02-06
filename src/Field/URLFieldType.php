@@ -5,6 +5,7 @@ use Bolt\Extension\Ross\URLField\Value\Url;
 use Bolt\Storage\EntityManager;
 use Bolt\Storage\Field\Type\FieldTypeBase;
 use Bolt\Storage\QuerySet;
+use Doctrine\DBAL\Types\Type;
 
 /**
  * This class extends the base field type and looks after serializing and hydrating the field
