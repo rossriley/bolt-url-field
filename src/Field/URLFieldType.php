@@ -25,7 +25,8 @@ class URLFieldType extends FieldTypeBase
         if (!$value instanceof Url) {
             $value = Url::fromNative($value);
         }
-
+        
+        $qb->setValue($key, ':' . $key);
         $qb->set($key, ':' . $key);
         $qb->setParameter($key, (string)$value);
 
