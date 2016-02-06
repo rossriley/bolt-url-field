@@ -197,7 +197,17 @@ class Url
             $port = \sprintf(':%d', $this->getPort());
         }
 
-        $urlString = \sprintf('%s://%s%s%s%s%s%s', $this->getScheme(), $userPass, $this->getDomain(), $port, $this->getPath(), $this->getQueryString(), $this->getFragmentIdentifier());
+        $querystring = '';
+        if ($this->getQueryString()) {
+            $querystring = sprintf('?%s', $this->getQueryString());
+        }
+
+        $fragment = '';
+        if ($this->getFragmentIdentifier()) {
+            $fragment = sprintf('#%s', $this->getFragmentIdentifier());
+        }
+
+        $urlString = \sprintf('%s://%s%s%s%s%s%s', $this->getScheme(), $userPass, $this->getDomain(), $port, $this->getPath(), $querystring, $fragment);
 
         return $urlString;
     }
