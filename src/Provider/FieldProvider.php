@@ -22,7 +22,6 @@ class FieldProvider implements ServiceProviderInterface
             $app->extend(
                 'storage.field_manager',
                 function (FieldManager $manager) {
-                    dump($manager); exit;
                     $manager->addFieldType('url', new URLFieldType());
 
                     return $manager;
