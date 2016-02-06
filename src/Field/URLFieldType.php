@@ -50,8 +50,7 @@ class URLFieldType extends FieldTypeBase
 
     public function getStorageType()
     {
-        dump($this->mapping); exit;
-        return Type::getType($this->mapping['type']);
+        return Type::getType('string');
     }
 
 }
