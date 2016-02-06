@@ -36,14 +36,14 @@ class Url
      */
     public static function fromNative()
     {
-        $urlString = \func_get_arg(0);
+        $urlString = func_get_arg(0);
 
-        $user        = \parse_url($urlString, PHP_URL_USER);
-        $pass        = \parse_url($urlString, PHP_URL_PASS);
-        $host        = \parse_url($urlString, PHP_URL_HOST);
-        $queryString = \parse_url($urlString, PHP_URL_QUERY);
-        $fragmentId  = \parse_url($urlString, PHP_URL_FRAGMENT);
-        $port        = \parse_url($urlString, PHP_URL_PORT);
+        $user        = parse_url($urlString, PHP_URL_USER);
+        $pass        = parse_url($urlString, PHP_URL_PASS);
+        $host        = parse_url($urlString, PHP_URL_HOST);
+        $queryString = parse_url($urlString, PHP_URL_QUERY);
+        $fragmentId  = parse_url($urlString, PHP_URL_FRAGMENT);
+        $port        = parse_url($urlString, PHP_URL_PORT);
 
         $scheme     = parse_url($urlString, PHP_URL_SCHEME);
         $user       = $user ?: '';
