@@ -24,7 +24,7 @@ class Extension extends SimpleExtension
     protected function registerTwigPaths()
     {
         return [
-            'templates/bolt' => ['position' => 'prepend', 'namespace'=>'bolt']
+            'templates/bolt' => ['position' => 'prepend', 'namespace'=>'app']
         ];
     }
 
