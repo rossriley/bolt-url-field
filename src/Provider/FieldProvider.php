@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Ross\URLField;
 
+use Bolt\Extension\Ross\URLField\Field\URLFieldType;
 use Bolt\Storage\FieldManager;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
@@ -14,8 +15,7 @@ class FieldProvider implements ServiceProviderInterface
             $app->extend(
                 'storage.field_manager',
                 function (FieldManager $manager, $app) {
-
-
+                    $manager->addFieldType('url', new URLFieldType());
 
                     return $manager;
                 }
