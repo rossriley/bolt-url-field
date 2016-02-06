@@ -5,7 +5,6 @@ use Bolt\Extension\Ross\URLField\Value\Url;
 use Bolt\Storage\EntityManager;
 use Bolt\Storage\Field\Type\FieldTypeBase;
 use Bolt\Storage\QuerySet;
-use Doctrine\DBAL\Types\Type;
 
 /**
  * This class extends the base field type and looks after serializing and hydrating the field
@@ -25,7 +24,7 @@ class URLFieldType extends FieldTypeBase
         if (!$value instanceof Url) {
             $value = Url::fromNative($value);
         }
-        
+
         $qb->setValue($key, ':' . $key);
         $qb->set($key, ':' . $key);
         $qb->setParameter($key, (string)$value);
