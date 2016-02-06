@@ -22,6 +22,13 @@ class FieldProvider implements ServiceProviderInterface
             )
         );
 
+        $app['storage.typemap'] = array_merge(
+            $app['storage.typemap'],
+            [
+                'url' => URLFieldType::class
+            ]
+        );
+
     }
 
     /**
