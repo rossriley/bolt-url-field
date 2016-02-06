@@ -50,6 +50,7 @@ class URLFieldType extends FieldTypeBase
 
     public function getStorageType()
     {
+        dump(\Doctrine\DBAL\Types\Type::getTypesMap()); exit;
         return Type::getType('string');
     }
 }
