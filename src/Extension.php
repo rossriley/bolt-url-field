@@ -21,6 +21,13 @@ class Extension extends SimpleExtension
         ];
     }
 
+    protected function registerTwigPaths()
+    {
+        return [
+            'templates' => ['position' => 'prepend', 'namespace' => 'bolt']
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
